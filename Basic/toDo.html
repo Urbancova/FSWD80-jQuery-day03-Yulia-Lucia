@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>TODO animation</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<style>
+		li {
+                    list-style-type: square;
+                    padding: 10px;
+            }
+
+        .animation {
+        	background-color: green;
+        }
+	</style>
+</head>
+<body>
+
+	<h1>jQuery TODO Animation</h1>
+	<div class="animation">
+		<ul>
+	            <li>10.00 Meet the broker</li>
+	            <li>11.00 Go to the bank</li>
+	            <li>12.00 Lunch with Mark</li>
+	            <li>15.00 Prepare the presentation</li>
+	            <li>17.00 Go to shopping</li>
+	    </ul>
+    </div>
+
+<script>
+	$(document).ready(function() {
+        $('li').on('click', function() {
+                $(this).animate({
+                        opacity: 0.0,
+                        paddingLeft: '+=80'
+                    }, 500, function() {
+                        $(this).remove();
+                    });
+                });
+        });
+	
+</script>
+
+</body>
+</html>
